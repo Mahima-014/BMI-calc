@@ -11,24 +11,25 @@ class CalculatorsBrain{
   }
   String getReviews(){
     if (_bmi >= 25){
-      return 'Overweight';
+      return 'Overweight ☹️';
     }
-    else if(_bmi <= 18){
-      return 'Normal';
+    else if(_bmi >= 18 && _bmi<=24.9){
+      return 'Normal  😃 ';
     }
-    else{
-      return 'Underweight';
+    else if(_bmi<=18){
+      return 'Underweight ☹️';
     }
   }
   String getInterpretation(){
-    if(_bmi>=25){
-      return 'Do some exercise. And drink plenty of water everyday';
+    if (_bmi >= 25){
+      return 'You need to exercise more  🏋🏼‍♀ & don\'t forget to drink 8 glasses of water everyday 🥛 ' ;
+    }
+    else if(_bmi >= 18 && _bmi<=24.9){
+      return 'Wow, you\'re good to go ✌️';
     }
     else if(_bmi<=18){
-      return 'Good job keep it up and do not forget to drink water';
+      return 'It\’s very important to eat mostly healthy foods and don\'t forget to drink plenty of water  🍱  🥛  ';
     }
-    else{
-      return 'Eat healty eat some vegies and drink enough water';
-    }
+
   }
 }
